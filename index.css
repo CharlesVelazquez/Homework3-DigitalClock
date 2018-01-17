@@ -1,0 +1,17 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+#test
+{
+	background-color: red;
+}
+
+#result
+{
+	width: 100px;
+	height: 20px;
+
+}
