@@ -39,7 +39,7 @@ function drawFace(context, radius)
 
 function makeNumbers (context, radius)
 {
-	var angle
+	var angle //will dictate location
 	var number
 }
 
