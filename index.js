@@ -1,8 +1,17 @@
 //declaring elements
-var clock = document.getElementById('clock');
-var context = clock.getContext ('2d');
-// //beginPath() - begins a path
-// //arc(x,y,r,startangle,endangle)
+var clock = document.getElementById('clock');//Grabbing canvas
+var context = clock.getContext ('2d');//grabbing internal stuff
+var radius = clock.height / 2; //self explanitory
+context.translate (radius, radius);//moves context to the center of the object
+radius = radius * 0.90;//necessary to properly draw clock by reducing the radius to 90%
+drawClock();
+
+function drawClock()//does the actual drawing of the clock body
+{
+	context.arc (0,0,radius,0,2 * Math.PI);
+	context.fillStyle = 'White';
+	context.fill();
+}
 // context.beginPath();
 // context.arc(95,50,40,0,2*Math.PI);
 // context.stroke();
