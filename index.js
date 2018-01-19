@@ -63,6 +63,7 @@ var hour = document.getElementById('hour')//Targets place hours will go
 var minute = document.getElementById('minute')//Targets place minutes will go
 var second = document.getElementById('second')//Targets place seconds will go
 var background = document.getElementById('background')//Targets place the background picture will go
+var greeting = document.getElementById('greeting')
 var check_hour, check_minute, check_second;// declared variables I'll use to check the corrosponding time
 
 //Function to set the time in the HTML and Background
@@ -106,6 +107,7 @@ else if (check_hour >= 12 && check_hour <= 16)//Aftermoon
         document.body.style.backgroundImage = "url('img/Afternoon.jpg')"
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundRepeat = "repeat-y";
+        greeting.innerHTML = 'Good Afternoon';
     }
 else if (check_hour >= 17 && check_hour <= 19)//Evening
     {
