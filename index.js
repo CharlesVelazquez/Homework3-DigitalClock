@@ -1,38 +1,18 @@
-var numb1 = document.getElementById ('num1')
-var numb2 = document.getElementById ('num2')
-var add = document.getElementById ('add')
-var minus = document.getElementById ('minus')
-var multiply = document.getElementById ('multiply')
-var divide = document.getElementById ('divide')
-var result = document.getElementById ('result')
-//variable.innerhtml targets text
-//variable.style.'css code' targets variable and applies css
+//declaring elements
+var clock = document.getElementById('clock');
+var context = clock.getContext ('2d');
+// //beginPath() - begins a path
+// //arc(x,y,r,startangle,endangle)
+// context.beginPath();
+// context.arc(95,50,40,0,2*Math.PI);
+// context.stroke();
 
-add.addEventListener ('click', adding);
-minus.addEventListener ('click', minusing);
-multiply.addEventListener ('click', multiplying);
-divide.addEventListener ('click', dividing);
+//.createLinearGradient(x,y,x1,y1) - creates a linear gradient
+//.createRadialGradient(x,y,r,x1,y1,r1) - creates a radial/circular gradient
+//.addColorStop() method specifies the color stops, and its position along the gradient. Gradient positions can be anywhere between 0 to 1
+//*Makes the blur ^
 
-function adding ()
-{
-	var added =  parseInt(numb1.value) + parseInt(numb2.value);
-		result.innerHTML = added
-}
+//font - defines the font properties for the text
+//fillText(text,x,y) - draws "filled" text on the canvas
+//strokeText(text,x,y) - draws text on the canvas (no fill)
 
-function minusing ()
-{
-	var minused =  parseInt(numb1.value) - parseInt(numb2.value);
-		result.innerHTML = minused
-}
-
-function multiplying ()
-{
-	var multiplied =  parseInt(numb1.value) * parseInt(numb2.value);
-		result.innerHTML = multiplied
-}
-
-function dividing ()
-{
-	var divided =  parseInt(numb1.value) / parseInt(numb2.value);
-		result.innerHTML = divided
-}

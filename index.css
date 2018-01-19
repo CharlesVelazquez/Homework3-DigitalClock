@@ -4,14 +4,9 @@
 	padding: 0;
 }
 
-#test
+#clock
 {
-	background-color: red;
-}
-
-#result
-{
-	width: 100px;
-	height: 20px;
-
+	width: 500px;
+	height: 500px;
+	background-color: black;
 }
