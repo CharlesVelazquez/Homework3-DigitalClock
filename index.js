@@ -6,12 +6,44 @@ context.translate (radius, radius);//moves context to the center of the object
 radius = radius * 0.90;//necessary to properly draw clock by reducing the radius to 90%
 drawClock();
 
-function drawClock()//does the actual drawing of the clock body
+function drawClock()//does the actual drawing of the clock
 {
 	context.arc (0,0,radius,0,2 * Math.PI);
 	context.fillStyle = 'White';
 	context.fill();
+	drawFace (context, radius); //makes the clock face minus the hands
+	makeNumbers (context, radius);
 }
+
+function drawFace(context, radius)
+{
+	var gradient; //going to use to add that gradient effect
+	context.beginPath();//starting a drawing location
+	context.arc(0, 0, radius, 0, 2*Math.PI);//draws a circle for me =)
+    context.fillStyle = 'white';//Da color
+    context.fill();//Actually executes the drawing
+
+    gradient = context.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);//this I learned from w3schools, I still don't really understand it
+    gradient.addColorStop(0, '#333');//color effect for inner
+    gradient.addColorStop(0.5, 'white');//color effect for middle
+    gradient.addColorStop(1, '#333');//color effect for outer
+    context.strokeStyle = gradient; //the gradient is now like A brush that will be used to draw =)
+    context.lineWidth = radius*0.1; //making a line 10% of the radius
+    context.stroke();//actually draw
+
+    context.beginPath();//setting a new location, drawing the clock nose below
+    context.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+    context.fillStyle = '#333';
+    context.fill();
+}
+
+function makeNumbers (context, radius)
+{
+	var angle
+	var number
+}
+
+
 // context.beginPath();
 // context.arc(95,50,40,0,2*Math.PI);
 // context.stroke();
